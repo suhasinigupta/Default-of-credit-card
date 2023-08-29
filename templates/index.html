@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<style>* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+   
+    background-color: rgb(213, 201, 201);
+   
+}
+
+.hed{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(56, 62, 60);
+
+}
+
+h1{
+    font-family: sans-serif;
+    font-weight: bolder;
+    color: rgb(219, 215, 210);
+}
+
+.let{
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    align-items: center;
+}
+
+h3{
+    font-size: 20px;
+}
+
+.first-line{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    margin-left: 60px;
+}
+
+
+
+.main-form{
+   
+   
+    width: 100%;
+    background-color: rgb(249, 246, 244);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+input,select{
+    border-radius: 5px;
+    border: 2px solid rgb(68, 66, 66);
+}
+
+.control{
+   
+   width: 100%;
+   margin-top: 5px;
+   margin-bottom: 5px;
+   background-color: rgb(229, 233, 226);
+   display: flex;
+   justify-content: center;
+    height: 20px;
+   
+}
+
+.sub{
+    display: flex;
+   justify-content: center;
+    width: 100%;
+    height: 20px;
+}
+
+.but{
+    font-weight: bold;
+    font-size: larger;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.but:hover{
+    color: white;
+    cursor: pointer;
+    background-color: rgb(29, 32, 30);
+}
+
+</style>
+ 
+<body>
+    <div class="hed">
+        <h1>Credit Card Fraud Detection</h1>
+    </div>
+    <div class="let">
+     <h3>Lets check your eligibility. Fill the below form</h3>
+      </div>
+
+        <div class="main-form">
+           
+                <form action='/predict' method= 'POST'>
+                    
+                       <div class="control">
+                            <label for="LIMIT_BAL">Limit Balance : </label>
+                            <input type="number" name="LIMIT_BAL" id="LIMIT_BAL">
+                       </div>
+                       <div class="control">
+                       
+                            <label for="AGE">Age : </label>
+                            <input type="number" name="AGE" id="AGE">
+                        </div>
+                        <div class="control">
+                        <label for="SEX">Gender : </label>
+                            <select name="SEX" id="SEX" class="select">
+                                <option value="none">Select here</option>
+                                <option value="1">Male</option>
+                                <option value="2">Female</option>
+                            </select>
+                        </div>
+
+                        <div class="control">
+                       <label for="MARRIAGE">MARITAL STATUS : </label>
+                            <select name="MARRIAGE" id="MARRIAGE" class="select">
+                                <option value="none">Select here</option>
+                                <option value="1">Married</option>
+                                <option value="2">Single</option>
+                                <option value="3">Others</option>
+                            </select>
+                        </div>
+                        <div class="control">
+                        <label for="EDUCATION">EDUCATION : </label>
+                            <select name="EDUCATION" id="EDUCATION" class="select">
+                                <option value="none">Select here</option>
+                                <option value="1">Graduate School</option>
+                                <option value="2">University</option>
+                                <option value="3">High School</option>
+                                <option value="4">Others</option>
+                            </select>
+                            </div>
+                        <div class="control">
+                        <label for="PAY_0">PAY STATUS IN SEPT : </label>
+                            <select name="PAY_0" id="PAY_0" class="select">
+                                <option value="none">Select here</option>
+                                <option value="-1">PAYDULY</option>
+                                <option value="1">Delay One Month</option>
+                                <option value="2">Delay Two Months</option>
+                                <option value="3">Delay Three Months</option>
+                                <option value="4">Delay Four Months</option>
+                                <option value="5">Delay Five Months</option>
+                                <option value="6">Delay Six Months</option>
+                                <option value="7">Delay Seven Months</option>
+                                <option value="8">Delay Eight Months</option>
+                                <option value="9">Delay Nine Months</option>
+                            </select>
+                        </div>
+                        <div class="control">
+                        <label for="PAY_2">PAY STATUS IN AUG : </label>
+                            <select name="PAY_2" id="PAY_2" class="select">
+                                <option value="none">Select here</option>
+                                <option value="-1">PAYDULY</option>
+                                <option value="1">Delay One Month</option>
+                                <option value="2">Delay Two Months</option>
+                                <option value="3">Delay Three Months</option>
+                                <option value="4">Delay Four Months</option>
+                                <option value="5">Delay Five Months</option>
+                                <option value="6">Delay Six Months</option>
+                                <option value="7">Delay Seven Months</option>
+                                <option value="8">Delay Eight Months</option>
+                                <option value="9">Delay Nine Months</option>
+                            </select>
+                           </div>
+
+                           <div class="control">
+                        
+                        <label for="PAY_3">PAY STATUS IN JULY : </label>
+                            <select name="PAY_3" id="PAY_3" class="select">
+                                <option value="none">Select here</option>
+                                <option value="-1">PAYDULY</option>
+                                <option value="1">Delay One Month</option>
+                                <option value="2">Delay Two Months</option>
+                                <option value="3">Delay Three Months</option>
+                                <option value="4">Delay Four Months</option>
+                                <option value="5">Delay Five Months</option>
+                                <option value="6">Delay Six Months</option>
+                                <option value="7">Delay Seven Months</option>
+                                <option value="8">Delay Eight Months</option>
+                                <option value="9">Delay Nine Months</option>
+                            </select>
+                         </div>
+                       <div class="control">
+                        <label for="PAY_4">PAY STATUS IN JUNE : </label>
+                            <select name="PAY_4" id="PAY_4" class="select">
+                                <option value="none">Select here</option>
+                                <option value="-1">PAYDULY</option>
+                                <option value="1">Delay One Month</option>
+                                <option value="2">Delay Two Months</option>
+                                <option value="3">Delay Three Months</option>
+                                <option value="4">Delay Four Months</option>
+                                <option value="5">Delay Five Months</option>
+                                <option value="6">Delay Six Months</option>
+                                <option value="7">Delay Seven Months</option>
+                                <option value="8">Delay Eight Months</option>
+                                <option value="9">Delay Nine Months</option>
+                            </select>
+                       </div>
+                       <div class="control">
+                        <label for="PAY_5">PAY STATUS IN MAY : </label>
+                            <select name="PAY_5" id="PAY_5" class="select">
+                                <option value="none">Select here</option>
+                                <option value="-1">PAYDULY</option>
+                                <option value="1">Delay One Month</option>
+                                <option value="2">Delay Two Months</option>
+                                <option value="3">Delay Three Months</option>
+                                <option value="4">Delay Four Months</option>
+                                <option value="5">Delay Five Months</option>
+                                <option value="6">Delay Six Months</option>
+                                <option value="7">Delay Seven Months</option>
+                                <option value="8">Delay Eight Months</option>
+                                <option value="9">Delay Nine Months</option>
+                            </select>
+                       </div>
+                       <div class="control">
+                        <label for="PAY_6">PAY STATUS IN APRIL : </label>
+                            <select name="PAY_6" id="PAY_6" class="select">
+                                <option value="none">Select here</option>
+                                <option value="-1">PAYDULY</option>
+                                <option value="1">Delay One Month</option>
+                                <option value="2">Delay Two Months</option>
+                                <option value="3">Delay Three Months</option>
+                                <option value="4">Delay Four Months</option>
+                                <option value="5">Delay Five Months</option>
+                                <option value="6">Delay Six Months</option>
+                                <option value="7">Delay Seven Months</option>
+                                <option value="8">Delay Eight Months</option>
+                                <option value="9">Delay Nine Months</option>
+                            </select>
+                        </div>
+                        <div class="control">
+                            <label for="BILL_AMT1">Bill Amount SEPT : </label>
+                            <input type="number" name="BILL_AMT1" id="BILL_AMT1">
+                         </div>
+                         <div class="control">
+                            <label for="BILL_AMT2">Bill Amount AUG : </label>
+                            <input type="number" name="BILL_AMT2" id="BILL_AMT2">
+                        </div>
+                        <div class="control">
+                            <label for="BILL_AMT3">Bill Amount JULY : </label>
+                            <input type="number" name="BILL_AMT3" id="BILL_AMT3">
+                        </div>
+                        <div class="control">
+                            <label for="BILL_AMT4">Bill Amount JUNE : </label>
+                            <input type="number" name="BILL_AMT4" id="BILL_AMT4">
+                        </div>
+                        <div class="control" id="may">
+                            <label for="BILL_AMT5">Bill Amount MAY : </label>
+                            <input type="number" name="BILL_AMT5" id="BILL_AMT5">
+                        </div>
+                        <div class="control">
+                            <label for="BILL_AMT6">Bill Amount April : </label>
+                            <input type="number" name="BILL_AMT6" id="BILL_AMT6">
+                        </div>
+                        <div class="control">
+                            <label for="PAY_AMT1">Paid In Sept : </label>
+                            <input type="number" name="PAY_AMT1" id="PAY_AMT1">
+                        </div>
+                        <div class="control">
+                            <label for="PAY_AMT2">Paid In Aug : </label>
+                            <input type="number" name="PAY_AMT2" id="PAY_AMT2">
+                        </div>
+                       <div class="control">
+                            <label for="PAY_AMT3">Paid In July : </label>
+                            <input type="number" name="PAY_AMT3" id="PAY_AMT3">
+                        </div>
+                       <div class="control">
+                            <label for="PAY_AMT4">Paid In June : </label>
+                            <input type="number" name="PAY_AMT4" id="PAY_AMT4">
+                        </div>
+  <div class="control">
+                            <label for="PAY_AMT5">Paid In May : </label>
+                            <input type="number" name="PAY_AMT5" id="PAY_AMT5">
+                       </div>
+ <div class="control">
+                            <label for="PAY_AMT6">Paid In April : </label>
+                            <input type="number" name="PAY_AMT6" id="PAY_AMT6">
+                         </div>
+
+
+                
+            
+            <div class="sub">
+                    <input type="submit" value="Submit" class="but">
+                    
+            </div>
+                </form>
+        </div>
+    
+</body>
+
+</html>
+
